@@ -4,8 +4,8 @@ return {
 	{ key = "-", mods = "CTRL", action = wezterm.action.DecreaseFontSize },
 	{ key = "=", mods = "CTRL", action = wezterm.action.IncreaseFontSize },
 	-- create / delete tabs
-	{ key = "n", mods = "ALT", action = wezterm.action.SpawnTab("DefaultDomain") },
-	{ key = "d", mods = "ALT", action = wezterm.action({ CloseCurrentPane = { confirm = false } }), },
+	{ key = "n", mods = "ALT | SHIFT", action = wezterm.action.SpawnTab("DefaultDomain") },
+	{ key = "d", mods = "ALT | SHIFT", action = wezterm.action({ CloseCurrentPane = { confirm = false } }), },
 	-- Moving between current tabs
 	{ key = "1", mods = "ALT", action = wezterm.action({ ActivateTab = 0 }) },
 	{ key = "2", mods = "ALT", action = wezterm.action({ ActivateTab = 1 }) },
@@ -17,11 +17,11 @@ return {
 	{ key = "8", mods = "ALT", action = wezterm.action({ ActivateTab = 7 }) },
 	{ key = "9", mods = "ALT", action = wezterm.action({ ActivateTab = 8 }) },
   -- Tmux panes
-  { key = 'Enter', mods = 'ALT', action = wezterm.action.ToggleFullScreen, },
+  { key = 'Enter', mods = 'ALT | SHIFT', action = wezterm.action.ToggleFullScreen, },
   { key = 'LeftArrow', mods = 'ALT', action = wezterm.action.ActivatePaneDirection 'Left', },
   { key = 'RightArrow', mods = 'ALT', action = wezterm.action.ActivatePaneDirection 'Right', },
   { key = 'UpArrow', mods = 'ALT', action = wezterm.action.ActivatePaneDirection 'Up', },
   { key = 'DownArrow', mods = 'ALT', action = wezterm.action.ActivatePaneDirection 'Down', },
-  { key = 'w', mods = 'ALT', action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }, },
-  { key = 'v', mods = 'ALT', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' }, },
+  { key = 'w', mods = 'ALT | SHIFT', action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }, },
+  { key = 'v', mods = 'ALT | SHIFT', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' }, },
 }
